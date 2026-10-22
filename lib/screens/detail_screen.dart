@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:wisata_candi/models/candi.dart';
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:wisata_candi_joacquine/models/candi.dart';
 
 class DetailScreen extends StatelessWidget {
   final Candi candi;
@@ -27,7 +28,7 @@ class DetailScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                // Tombol back kustom (slide berikutnya)
+                // Tombol back kustom
                 Padding(
                   padding: const EdgeInsets.symmetric(
                     horizontal: 16,
@@ -39,7 +40,9 @@ class DetailScreen extends StatelessWidget {
                       shape: BoxShape.circle,
                     ),
                     child: IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
                       icon: const Icon(Icons.arrow_back),
                     ),
                   ),
@@ -152,7 +155,7 @@ class DetailScreen extends StatelessWidget {
                                     color: Colors.deepPurple[50],
                                   ),
                                   errorWidget: (context, url, error) =>
-                                      const Icon(Icons.error),
+                                  const Icon(Icons.error),
                                 ),
                               ),
                             ),
@@ -177,13 +180,4 @@ class DetailScreen extends StatelessWidget {
       ),
     );
   }
-}@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SingleChildScrollView(
-      child: Column(
-        children: [ ... ],
-      ),
-    ),
-  );
 }
