@@ -19,8 +19,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
     setState(() {
       isSignedIn = true;
       // Simulasi data saat sign in berhasil (Sesuai target slide hal. 3)
-      userName = 'rachmadi';
-      fullName = 'Muhammad Rachmadi';
+      userName = 'Jakues';
+      fullName = 'Jakues Wirya';
       favoriteCandiCount = 0;
     });
   }
