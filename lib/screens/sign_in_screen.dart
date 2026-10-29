@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart'; // Jangan lupa import ini untuk TapGestureRecognizer
+import 'package:provider/provider.dart'; // <-- Jangan lupa import provider
+import 'package:wisata_candi_joacquine/providers/auth_provider.dart'; // <-- Sesuaikan dengan path AuthProvider Anda
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({super.key});
@@ -9,13 +11,21 @@ class SignInScreen extends StatefulWidget {
 }
 
 class _SignInScreenState extends State<SignInScreen> {
-  // Tdo 1 Deklarasi variabel
+  // TODO 1 Deklarasi variabel
   final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
   final String _errorText = '';
   final bool _isSignedin = false;
   bool _obscurePassword = true; // Diubah agar bisa diubah nilainya oleh setState
+
+  // Fungsi _signIn diletakkan di dalam State class agar bisa mengakses controller & context
+  void _signIn() {
+    final name = _usernameController.text.trim();
+    if (name.isEmpty) return;
+    context.read<AuthProvider>().signIn(name);
+    Navigator.pop(context);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -66,9 +76,9 @@ class _SignInScreenState extends State<SignInScreen> {
                     ),
                   ),
                   const SizedBox(height: 20),
-                  // TODO: 7. ElevatedButton Sign In
+                  // TODO: 7. ElevatedButton Sign In (Menghubungkan fungsi _signIn)
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: _signIn,
                     child: const Text('Sign In'),
                   ),
                   const SizedBox(height: 10),
