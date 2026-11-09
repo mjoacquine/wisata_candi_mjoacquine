@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:wisata_candi_joacquine/data/candi_data.dart';
 import 'package:wisata_candi_joacquine/screens/detail_screen.dart';
 import 'package:wisata_candi_joacquine/screens/profile_screen.dart';
+import 'package:wisata_candi_joacquine/screens/search_screen.dart';
 import 'package:wisata_candi_joacquine/screens/sign_in_screen.dart';
 import 'package:wisata_candi_joacquine/providers/favorite_provider.dart';
 import 'package:wisata_candi_joacquine/providers/auth_provider.dart';
@@ -31,9 +32,10 @@ class MyApp extends StatelessWidget {
         // Diperbaiki dari .fromSeed menjadi ColorScheme.fromSeed
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: DetailScreen(candi: candiList[0]),
+      // home: DetailScreen(candi: candiList[0]),
       // home: ProfileScreen(),
       // home: const SignInScreen(),
+      home: SearchScreen(),
     );
   }
 }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:wisata_candi_joacquine/providers/favorite_provider.dart';
 import 'package:wisata_candi_joacquine/providers/auth_provider.dart';
-
+import 'package:wisata_candi_joacquine/data/candi_data.dart';
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
 
