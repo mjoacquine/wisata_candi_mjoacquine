@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wisata_candi_joacquine/data/candi_data.dart';
-// Import model candi jika diperlukan, contoh:
-// import 'package:wisata_candi_joacquine/models/candi.dart';
+import  'package:wisata_candi_joacquine/widgets/item_card.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -20,12 +19,8 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       // TODO 2: Buat body dengan GridView.builder
       body: GridView.builder(
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          crossAxisSpacing: 8, // Opsional: jarak antar kolom
-          mainAxisSpacing: 8,  // Opsional: jarak antar baris
-        ),
-        padding: const EdgeInsets.all(8),
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+        padding:  EdgeInsets.all(8),
         itemCount: candiList.length,
         itemBuilder: (BuildContext context, int index) {
           // Buat variabel candi sesuai index

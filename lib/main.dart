@@ -8,6 +8,7 @@ import 'package:wisata_candi_joacquine/screens/sign_in_screen.dart';
 import 'package:wisata_candi_joacquine/providers/favorite_provider.dart';
 import 'package:wisata_candi_joacquine/providers/auth_provider.dart';
 import 'package:wisata_candi_joacquine/widgets/item_card.dart';
+import 'package:wisata_candi_joacquine/screens/home_screen.dart';
 
 void main() {
   runApp(
