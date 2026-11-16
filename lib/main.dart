@@ -7,6 +7,7 @@ import 'package:wisata_candi_joacquine/screens/search_screen.dart';
 import 'package:wisata_candi_joacquine/screens/sign_in_screen.dart';
 import 'package:wisata_candi_joacquine/providers/favorite_provider.dart';
 import 'package:wisata_candi_joacquine/providers/auth_provider.dart';
+import 'package:wisata_candi_joacquine/widgets/item_card.dart';
 
 void main() {
   runApp(
@@ -35,7 +36,8 @@ class MyApp extends StatelessWidget {
       // home: DetailScreen(candi: candiList[0]),
       // home: ProfileScreen(),
       // home: const SignInScreen(),
-      home: SearchScreen(),
+      // home: SearchScreen(),
+      home: HomeScreen(),
     );
   }
 }
